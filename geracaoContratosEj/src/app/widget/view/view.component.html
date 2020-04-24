@@ -1,0 +1,37 @@
+<po-widget [p-title]="titulo">
+    <po-container p-no-shadow="true" p-no-border="true" class="po-md-12">
+        <po-container p-no-shadow="true" p-no-border="true" class="po-md-6">
+            <po-select name="select" p-label="Categoria de Contratação" [p-options]="categoriasContratacao">
+            </po-select>
+        </po-container>
+    </po-container>
+    <po-container p-no-shadow="true" p-no-border="true" class="po-md-12">
+        <po-container p-no-shadow="true" p-no-border="true" class="po-md-6">
+            <po-input p-label="Título Do Contrato" id="inp" name="inp"></po-input>
+        </po-container>
+    </po-container>
+    <po-container>
+        <po-container p-no-shadow="true" p-no-border="true" class="po-md-12">
+            <po-container p-no-shadow="true" p-no-border="true" class="po-md-10">
+            </po-container>
+            <po-button (p-click)="salvarContrato()" id="btn_salvar" name="btn_salvar" class="po-md-1" p-icon="po-icon po-icon-ok">
+            </po-button>
+            <po-button (p-click)="excluirContrato()" id="btn_excluir" name="btn_excluir" class="po-md-1"
+                p-icon="po-icon po-icon-delete">
+            </po-button>
+        </po-container>
+        <po-container p-no-shadow="true" p-no-border="true" class="po-md-9">
+            <ckeditor [(ngModel)]="model.editorData" id="cked" [editor]="Editor"></ckeditor>
+        </po-container>
+            <po-container p-no-shadow="true" p-no-border="true" class="po-md-3">
+                <po-select p-label="Campos do Formulário"  [p-options]="camposFormulario" (p-change)="changeCampo()" [(ngModel)]="selCampo">
+                </po-select>
+
+                <!--<po-lookup name="lookup" p-field-label="label" p-field-value="value"
+                    p-filter-service="https://thf.totvs.com.br/sample/api/new/heroes?fields=id,name,nickname,email" p-label="PO Lookup">
+                </po-lookup>-->
+            </po-container>
+    </po-container>
+</po-widget>
+
+

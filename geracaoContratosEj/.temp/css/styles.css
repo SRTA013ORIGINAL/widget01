@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+  
+/* .po-button{
+    border-color: transparent;
+    color: black;
+}
+#btn_salvar .po-button{
+    background-color: #29c736;
+}
+
+#btn_excluir .po-button{
+    background-color: rgb(248, 74, 74);
+}
+
+
+:hover, .po-select-button, .po-select-button:hover{
+    border-color: rgb(107, 106, 106);
+}
+
+span{
+    color: black;
+} */
+
+:root{
+    --color-button-background-color: black;
+}
